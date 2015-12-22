@@ -7,7 +7,7 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     errorHandler = require('errorhandler'),
-    hostname = process.env.HOSTNAME || 'localhost',
+    hostname = process.env.HOSTNAME || '0.0.0.0',
     port = 6969;
 
 app.use(bodyParser.json());

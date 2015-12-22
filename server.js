@@ -22,6 +22,8 @@ app.use(errorHandler({
 
 app.post('/', function (req, res) {
   exec('sh ./update_site.sh').then(function(r) {
+    console.log(r.stdout)
+    console.err(r.stderr)
     res.send(r.stdout);
   });
 });
